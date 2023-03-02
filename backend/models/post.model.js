@@ -12,4 +12,9 @@ const postSchema = mongoose.Schema({
     likers: {
         type: [String]
     }
+},
+{
+    timestamps: true
 })
+
+module.exports = mongoose.model('post', postSchema)

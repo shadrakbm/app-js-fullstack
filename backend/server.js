@@ -18,5 +18,5 @@ app.use(urlencoded({ extended: false }))
 //Routes
 app.use('/post', require('./routes/post.routes'))
 
-//Lancer le serveur
+//Lancement du serveur
 app.listen(port, () => console.log('Le serveur a démarré au port ' +port))
