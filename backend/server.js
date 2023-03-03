@@ -1,8 +1,9 @@
-const { urlencoded } = require('express')
-const express = require('express')
+const express = require("express")
 
-const connectDB = require('./config/db')
-const dotenv = require('dotenv').config()
+const { urlencoded } = require("express")
+
+const connectDB = require("./config/db")
+const dotenv = require("dotenv").config()
 
 const port = 5000
 
@@ -16,7 +17,7 @@ app.use(express.json())
 app.use(urlencoded({ extended: false }))
 
 //Routes
-app.use('/post', require('./routes/post.routes'))
+app.use("/post", require("./routes/post.routes"))
 
 //Lancement du serveur
-app.listen(port, () => console.log('Le serveur a démarré au port ' +port))
+app.listen(port, () => console.log("Le serveur a démarré au port " +port))
