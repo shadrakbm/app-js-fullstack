@@ -5,7 +5,7 @@ module.exports.getPosts = async (req, res) => {
     res.status(200).json(posts)
 }
 
-module.exports.setPosts = async (req, res) => {
+module.exports.setPost = async (req, res) => {
     if (!req.body.message) {
         res.status(400).json({ message: "Veuillez ajouter un post" })
     }
@@ -35,7 +35,7 @@ module.exports.deletePost = async (req, res) => {
         res.status(400).json({ message: "Ce post n'existe pas" })
     }
     await PostModel.findByIdAndRemove(post)
-    res.status(200).json("post supprimé")
+    res.status(200).json("Post supprimé")
 }
 
 module.exports.likePost = async (req, res) => {

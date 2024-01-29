@@ -1,10 +1,16 @@
 const express = require("express")
-const { getPosts, setPosts, editPost, deletePost, likePost, dislikePost } = require("../controllers/post.controllers")
+const { 
+    getPosts, 
+    setPost, 
+    editPost,
+    deletePost,
+    likePost,
+    dislikePost } = require("../controllers/post.controllers")
 
 const router = express.Router()
 
 router.get("/", getPosts)
-router.post("/", setPosts)
+router.post("/", setPost)
 router.put("/:id", editPost)
 router.delete("/:id", deletePost)
 router.patch("/like-post/:id", likePost)
